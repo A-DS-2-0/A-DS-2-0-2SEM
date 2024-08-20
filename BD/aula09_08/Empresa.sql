@@ -611,4 +611,4 @@ VALUES
  
  select nome, email, idade from empresa where idade >=18 and idade<=20;
  select nome, email, idade from empresa where idade>=18 and idade <=20 order by idade asc;
-select nome, email, idade from empresa where idade <=40 order by nome asc;
+select * from empresa where idade <=40 order by nome asc;
