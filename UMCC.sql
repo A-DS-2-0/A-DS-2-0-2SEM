@@ -22,9 +22,8 @@ insert into clientes(cod_cliente, nome_cliente,email_cliente,cpf_cliente,celular
 (null,'Marcelo Ramos', 'Ramos@umc.com','9999999999','32819518842', '2005/09/02'),
 (null, 'André Ramos', 'andreramos@umc.com','9999999999','32918955360','2001/10/18');
 
-select * from clientes where nome_cliente like 'm%'; #1
-select * from clientes where nome_cliente like '%ramos'; #2
-select * from clientes where email_cliente like '%umc%'; #3
-select cod_cliente, nome_cliente from clientes where cod_cliente >=1 and cod_cliente <=2; #4
-
+select * from clientes where nome_cliente like 'm%'; #1Consulta: Seleciona todos os clientes cujos nomes começam com a letra "m".
+select * from clientes where nome_cliente like '%ramos'; #2Consulta: Seleciona todos os clientes cujos nomes terminam com "ramos".
+select * from clientes where email_cliente like '%umc%'; #3Consulta: Seleciona todos os clientes cujo e-mail contém "umc" em qualquer parte.
+select cod_cliente, nome_cliente from clientes where cod_cliente >=1 and cod_cliente <=2; #4Consulta: Seleciona o código e nome dos clientes cujos códigos são 1 ou 2
 
