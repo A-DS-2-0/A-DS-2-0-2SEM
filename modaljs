@@ -1,0 +1,24 @@
+<div id="modal1" class="modal">
+        <div class="modal-content">
+            <h4>Desafio 1</h4>
+            <p>programa que le um número inteiro e mostra na tela e seu sucessor e seu antecessor.</p>
+            <div class="row">
+                <form id="desafio1" class="col s12">
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <input placeholder="Digite um número" id="numero" type="text" class="validate">
+                            <label for="numero">Digite um número</label>
+                            <button class="close" type="submit">Enviar</button>
+                        </div>
+                    </div>
+                </form>
+                <div id="resultado" class="row" style="margin-top: 20px;">
+                  
+                </div>
+            </div>
+        </div>
+
+        <div class="modal-footer">
+            <a href="#!" class="modal-close btn-flat">Fechar</a>
+        </div>
+    </div>
