@@ -30,8 +30,9 @@ values(null,"Marcos","Bontempo","Rua tito",100,"vila romana","08554120","SP"),
 (null,"Cristina","Fantinato","Rua fabia",55,"vila romana","12345678","SP"),
 (null,"Flavio", "Silva","Rua marechal", 181,"jardim piriri","87654321","SP");
 
+#O concat é usado para concatenar duas ou mais strings em uma única string. Ele une os valores passados como parâmetros, formando uma sequência de texto contínua.
 select produto, concat('R$',quantidade*valor_unit) as valor_bruto from produto;
-select produto,  concat('R$',substring(quantidade*valor_unit, 1,6)) as valor_bruto from produto;
+select produto,  concat('R$',substring(quantidade*valor_unit, 1,6)) as valor_bruto from produto; #o comando concat tem como funçaõ
 select concat(nome," ", sobrenome) as nome_completo, concat(substring(cep,1,5),"-" ,substring(cep,6,8)) as cep_formatado, estado from usuario;
 select * from usuario;
 select * from produto;
