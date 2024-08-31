@@ -1,0 +1,627 @@
+
+DROP TABLE IF EXISTS `vendas`;
+
+CREATE TABLE `vendas` (
+  `id` mediumint(8) unsigned NOT NULL auto_increment,
+  `nome` varchar(255) default NULL,
+  `email` varchar(255) default NULL,
+  `numberrange` varchar(255),
+  `idade` mediumint default NULL,
+  `cores` char(12) default NULL,
+  `venda` varchar(100) default NULL,
+  PRIMARY KEY (`id`)
+) AUTO_INCREMENT=1;
+
+INSERT INTO `vendas` (`nome`,`email`,`numberrange`,`idade`,`cores`,`venda`)
+VALUES
+  ("Dennis Carey","pede.ac@outlook.edu","May 3, 2025",25,"#ef2421","$81.96"),
+  ("Ivan Walker","arcu.vestibulum.ante@outlook.net","Nov 25, 2024",65,"#bcffa5","$46.21"),
+  ("Lucius Briggs","nulla.magna@protonmail.ca","Aug 24, 2023",32,"#fcce6c","$18.96"),
+  ("Ursula Harper","faucibus.leo@hotmail.net","Dec 17, 2024",77,"#2f0f89","$75.10"),
+  ("Charlotte Howe","augue@protonmail.org","Dec 4, 2024",35,"#010891","$27.74"),
+  ("Tatiana Farrell","lorem@hotmail.org","Dec 1, 2024",76,"#cf60ff","$21.54"),
+  ("Carson Holden","orci.donec@outlook.couk","Nov 22, 2023",48,"#cdc6ff","$88.11"),
+  ("Forrest Harrell","orci.adipiscing@aol.couk","Nov 23, 2024",46,"#8c67bc","$98.54"),
+  ("Amy Knox","nibh.vulputate@aol.net","Jun 23, 2024",88,"#bd13db","$81.42"),
+  ("Jerry Shelton","in.nec@protonmail.couk","Apr 7, 2025",50,"#8ad345","$83.72");
+INSERT INTO `vendas` (`nome`,`email`,`numberrange`,`idade`,`cores`,`venda`)
+VALUES
+  ("Nasim Haney","in.hendrerit@hotmail.ca","Aug 7, 2024",22,"#8fbed8","$2.31"),
+  ("Regan Lucas","eu.ultrices@yahoo.edu","Feb 12, 2024",89,"#c6e87f","$87.45"),
+  ("Raphael Bush","aliquet@outlook.com","Feb 12, 2023",56,"#6833b2","$64.56"),
+  ("Belle Jimenez","amet.lorem@google.ca","Jul 21, 2025",74,"#70dd66","$36.26"),
+  ("Prescott Norton","nulla.interdum.curabitur@yahoo.couk","May 18, 2024",65,"#0713b7","$10.17"),
+  ("Ingrid Hopper","volutpat.nunc@outlook.couk","Nov 5, 2023",57,"#1fa4d1","$98.17"),
+  ("Deacon Garrison","dolor.fusce@yahoo.couk","Nov 11, 2024",72,"#a8c930","$98.83"),
+  ("Melyssa Porter","morbi.non@google.com","Feb 19, 2025",53,"#564bd1","$63.10"),
+  ("Yoshi Mack","faucibus.leo.in@outlook.com","Apr 18, 2024",49,"#c0d854","$11.77"),
+  ("Evan Pate","a@outlook.org","Oct 12, 2024",71,"#2650c1","$62.30");
+INSERT INTO `vendas` (`nome`,`email`,`numberrange`,`idade`,`cores`,`venda`)
+VALUES
+  ("Gregory Hunt","odio.tristique.pharetra@icloud.net","Apr 23, 2023",16,"#35f2cf","$31.86"),
+  ("Darryl Lynch","ullamcorper.velit.in@aol.ca","Dec 29, 2023",48,"#f9d5a4","$72.67"),
+  ("Lionel Schneider","ridiculus@yahoo.net","Aug 23, 2025",25,"#f29dc7","$90.65"),
+  ("Maite Tyler","feugiat.nec@yahoo.edu","Feb 21, 2025",69,"#57d6a7","$64.66"),
+  ("Lev Cash","dictum.eleifend@protonmail.edu","May 12, 2023",35,"#db028b","$59.69"),
+  ("Zenaida Carney","donec@google.net","Jan 31, 2025",28,"#1ab284","$15.38"),
+  ("Dante Contreras","consectetuer.adipiscing.elit@icloud.com","Jul 5, 2024",16,"#f2daab","$49.77"),
+  ("Baker Leon","congue.in.scelerisque@outlook.com","Jul 19, 2024",42,"#799fea","$59.18"),
+  ("August Moore","lorem.ut@icloud.edu","Jul 3, 2024",21,"#59d12e","$99.05"),
+  ("Mara Ochoa","penatibus.et@aol.net","Sep 4, 2023",57,"#406fa5","$21.45");
+INSERT INTO `vendas` (`nome`,`email`,`numberrange`,`idade`,`cores`,`venda`)
+VALUES
+  ("Lysandra Stuart","ut.nec@outlook.edu","Jul 22, 2023",30,"#5054b7","$86.74"),
+  ("Prescott Dominguez","pede.blandit.congue@protonmail.com","Feb 29, 2024",21,"#9240ef","$64.14"),
+  ("Avye Atkins","nisi.nibh@hotmail.edu","Dec 27, 2023",42,"#e59749","$98.37"),
+  ("Ryan Webb","morbi.metus@icloud.couk","Jan 21, 2024",77,"#2a458e","$17.26"),
+  ("Driscoll Herman","imperdiet.ornare@outlook.couk","Oct 24, 2023",89,"#06821f","$1.08"),
+  ("Daquan Brooks","ligula.donec@google.couk","Dec 4, 2024",16,"#350372","$33.44"),
+  ("Ashely Cooper","etiam.vestibulum@icloud.couk","Sep 25, 2023",51,"#66c60b","$61.18"),
+  ("Zia Clark","fringilla.euismod@hotmail.ca","May 22, 2025",66,"#f99820","$60.27"),
+  ("Alisa Graves","quis.arcu@google.net","Jun 26, 2023",34,"#ea75c1","$28.97"),
+  ("David Dunn","auctor.quis@aol.edu","Mar 1, 2024",36,"#152cb2","$88.39");
+INSERT INTO `vendas` (`nome`,`email`,`numberrange`,`idade`,`cores`,`venda`)
+VALUES
+  ("Roanna Buck","iaculis.aliquet@hotmail.net","May 15, 2023",53,"#f4eda1","$73.87"),
+  ("Kaseem Bean","nec@aol.com","Feb 28, 2024",69,"#6df2ab","$50.28"),
+  ("Neil Hanson","diam.luctus@google.com","Oct 6, 2024",23,"#e0a84e","$13.26"),
+  ("Yeo Peters","nullam.vitae.diam@yahoo.edu","Mar 17, 2025",88,"#97f4b2","$24.51"),
+  ("Mira Rivas","consequat.auctor.nunc@hotmail.com","Jul 12, 2024",38,"#9def56","$46.01"),
+  ("Amir Reilly","porttitor.vulputate@protonmail.net","Mar 12, 2023",36,"#fca446","$44.43"),
+  ("Jonas Meyers","non.enim.mauris@hotmail.edu","Feb 9, 2023",51,"#d85894","$74.56"),
+  ("Brian Compton","nec@aol.org","Aug 9, 2025",74,"#34b215","$77.57"),
+  ("Stacey Petersen","eleifend.non.dapibus@protonmail.ca","Sep 4, 2023",46,"#5cbf35","$13.05"),
+  ("Hamilton Cantrell","lobortis.ultrices@yahoo.com","Feb 17, 2025",31,"#7fbdef","$48.36");
+INSERT INTO `vendas` (`nome`,`email`,`numberrange`,`idade`,`cores`,`venda`)
+VALUES
+  ("Kadeem Rowe","consectetuer.ipsum.nunc@protonmail.org","Sep 19, 2023",37,"#4876bf","$47.54"),
+  ("Aileen Moreno","magna@protonmail.couk","May 25, 2025",19,"#d12983","$64.22"),
+  ("Theodore Hawkins","nunc.sed.orci@google.couk","Mar 3, 2023",60,"#7bd6e0","$22.81"),
+  ("Dillon Trujillo","nunc.ac.mattis@protonmail.com","Mar 4, 2024",77,"#e409e8","$49.40"),
+  ("Sage Moon","sem.eget@google.couk","Jan 1, 2025",21,"#08ce93","$96.80"),
+  ("Ori Eaton","adipiscing.elit.etiam@protonmail.org","Mar 8, 2024",78,"#f7bbf5","$52.48"),
+  ("Yen Good","lectus@aol.org","Apr 30, 2024",54,"#e8312e","$62.37"),
+  ("Paki Clayton","luctus.felis@outlook.com","Apr 22, 2023",49,"#a428e2","$61.08"),
+  ("Piper Hoffman","sed.consequat@icloud.com","Apr 26, 2023",40,"#082f6d","$90.42"),
+  ("Zelenia Meadows","malesuada.id.erat@aol.couk","Apr 11, 2023",59,"#f2b5d6","$18.32");
+INSERT INTO `vendas` (`nome`,`email`,`numberrange`,`idade`,`cores`,`venda`)
+VALUES
+  ("Xanthus Fleming","ultrices.iaculis@protonmail.ca","Feb 3, 2025",31,"#1c7f8e","$12.48"),
+  ("Heather Simon","iaculis.aliquet@aol.org","Jan 16, 2023",84,"#dd6ca7","$9.09"),
+  ("Teegan Kramer","nec.euismod.in@outlook.edu","Jul 7, 2024",71,"#f9cd9d","$66.42"),
+  ("Gwendolyn Everett","quam.a.felis@outlook.edu","Jun 16, 2024",42,"#7b09c1","$63.59"),
+  ("Geoffrey Stephens","neque.sed@protonmail.net","Sep 12, 2023",58,"#709dea","$62.75"),
+  ("Keegan Munoz","vulputate.posuere.vulputate@outlook.com","Mar 23, 2024",33,"#0ca065","$89.78"),
+  ("Rashad Howe","vitae.aliquet@google.net","Oct 20, 2023",71,"#a4f751","$24.77"),
+  ("Medge Gay","faucibus.orci@aol.edu","Sep 22, 2023",40,"#b9ea25","$67.56"),
+  ("Igor Howard","libero.integer@hotmail.ca","Feb 24, 2023",32,"#8be8de","$30.19"),
+  ("Yuri Love","rhoncus.nullam.velit@google.net","Sep 13, 2023",75,"#edcf90","$63.02");
+INSERT INTO `vendas` (`nome`,`email`,`numberrange`,`idade`,`cores`,`venda`)
+VALUES
+  ("Dale Cervantes","iaculis.enim.sit@protonmail.edu","Sep 9, 2023",27,"#ea4f7e","$11.77"),
+  ("Phelan Richardson","non.quam@icloud.com","Mar 18, 2025",23,"#fcd9c4","$8.20"),
+  ("Zachery Bush","penatibus.et@protonmail.net","Jul 31, 2025",48,"#90f986","$16.28"),
+  ("Emma Hernandez","consectetuer.ipsum@protonmail.net","Oct 27, 2024",75,"#c6913b","$76.43"),
+  ("Thane Raymond","quisque.porttitor.eros@aol.net","Jun 1, 2023",46,"#e0c37b","$22.81"),
+  ("Burton Jenkins","ullamcorper.nisl@google.net","Mar 25, 2023",52,"#13d6a8","$36.53"),
+  ("Griffin Bean","blandit.at@outlook.ca","Mar 11, 2023",87,"#e283a0","$26.26"),
+  ("Tate Rojas","odio.semper@google.org","Aug 16, 2024",45,"#afffbf","$47.97"),
+  ("Cynthia Prince","ut.molestie.in@hotmail.edu","Jan 28, 2024",58,"#d327ea","$27.91"),
+  ("Fredericka Mayer","tellus@yahoo.org","Nov 25, 2024",77,"#0946e2","$15.97");
+INSERT INTO `vendas` (`nome`,`email`,`numberrange`,`idade`,`cores`,`venda`)
+VALUES
+  ("Jelani Lambert","sed@aol.couk","Mar 9, 2024",89,"#faccff","$16.22"),
+  ("Aiko Boyle","proin.velit@icloud.edu","Jan 30, 2025",52,"#f74077","$54.58"),
+  ("Tatiana Crawford","fames.ac@google.ca","Jun 5, 2024",38,"#7ea0f7","$67.39"),
+  ("Xenos Lamb","donec@icloud.com","Mar 20, 2024",55,"#6082bc","$72.89"),
+  ("David Higgins","nec.urna@yahoo.edu","Apr 11, 2025",85,"#ffccee","$40.12"),
+  ("Fiona Rhodes","magna.malesuada@protonmail.org","Feb 19, 2025",71,"#e657f9","$9.05"),
+  ("Jackson Mcguire","lacus.ut@protonmail.edu","Sep 9, 2024",16,"#7fe280","$80.81"),
+  ("Bernard England","placerat.eget@protonmail.net","Apr 30, 2024",62,"#81c4d3","$62.05"),
+  ("Kiayada Ray","risus.quisque@protonmail.edu","May 10, 2023",73,"#68d100","$71.88"),
+  ("Keefe Chavez","fermentum.metus.aenean@google.ca","Sep 2, 2023",26,"#93f260","$44.26");
+INSERT INTO `vendas` (`nome`,`email`,`numberrange`,`idade`,`cores`,`venda`)
+VALUES
+  ("Gillian Tillman","ridiculus@icloud.com","Feb 13, 2023",44,"#7eebf7","$76.77"),
+  ("Medge Gardner","suspendisse.ac@aol.couk","Dec 19, 2023",21,"#bd5bd8","$63.68"),
+  ("Hyatt Parks","dignissim.lacus.aliquam@icloud.ca","Jun 28, 2023",62,"#63e894","$9.81"),
+  ("Jonas Mccullough","sociis@hotmail.couk","Jul 7, 2025",67,"#e2cf53","$56.19"),
+  ("Abraham Black","in.lorem.donec@icloud.ca","Jun 28, 2024",65,"#91ed47","$99.08"),
+  ("Bradley Marsh","quis@hotmail.edu","Aug 14, 2025",39,"#2c8d8e","$70.57"),
+  ("Fredericka Bates","erat.volutpat.nulla@aol.com","Feb 4, 2025",50,"#ed93c3","$52.20"),
+  ("Norman Fleming","nisi@protonmail.net","Mar 25, 2025",30,"#69ef2b","$22.10"),
+  ("Sopoline Arnold","congue.turpis.in@aol.edu","Jun 2, 2023",51,"#e27b61","$16.05"),
+  ("Jesse Short","nunc.laoreet.lectus@protonmail.couk","Mar 22, 2023",37,"#094cea","$64.28");
+INSERT INTO `vendas` (`nome`,`email`,`numberrange`,`idade`,`cores`,`venda`)
+VALUES
+  ("Stone Mcguire","enim.non@protonmail.ca","Sep 8, 2024",53,"#f29bbb","$38.41"),
+  ("Catherine Foster","et.rutrum@protonmail.couk","May 3, 2023",60,"#79ed53","$12.93"),
+  ("Quynn Hurley","arcu.sed@aol.edu","Apr 20, 2023",80,"#81e840","$42.51"),
+  ("Unity Leblanc","ridiculus.mus@outlook.net","May 15, 2025",76,"#f78cde","$37.05"),
+  ("Heather Hobbs","metus.urna@google.com","Jul 10, 2024",41,"#edc825","$80.38"),
+  ("Griffin Barry","a.scelerisque@yahoo.couk","Feb 28, 2023",73,"#72dbb1","$75.42"),
+  ("Ali Benton","pede.suspendisse@outlook.com","Nov 8, 2023",54,"#be7ff9","$92.60"),
+  ("Jonah Hopkins","pede.et.risus@yahoo.edu","Apr 6, 2023",37,"#77dd83","$46.08"),
+  ("Fulton Hanson","non.ante@outlook.net","Mar 23, 2023",83,"#adf7a5","$45.15"),
+  ("Reece Hensley","lorem@google.org","Jan 7, 2023",63,"#85dd75","$38.31");
+INSERT INTO `vendas` (`nome`,`email`,`numberrange`,`idade`,`cores`,`venda`)
+VALUES
+  ("Chandler Griffith","dui.nec@hotmail.couk","May 23, 2024",26,"#db55a1","$57.43"),
+  ("Russell Robles","tellus@yahoo.couk","May 31, 2024",75,"#68d8a2","$87.92"),
+  ("Willow Beasley","non@aol.org","Apr 19, 2025",23,"#81e06d","$5.27"),
+  ("Chanda Morales","nec.luctus.felis@protonmail.com","Feb 21, 2023",88,"#35eac0","$62.66"),
+  ("Elaine Dennis","ante.ipsum@hotmail.net","Mar 12, 2025",86,"#ea6be8","$86.70"),
+  ("Rigel Peterson","a.felis@aol.edu","Apr 9, 2025",42,"#ce57f2","$0.07"),
+  ("Raja Neal","ridiculus@outlook.org","Jan 18, 2023",44,"#87ea85","$29.58"),
+  ("Nehru Donaldson","massa.vestibulum@aol.net","Nov 3, 2023",31,"#2edb87","$60.57"),
+  ("Candace Buckner","erat.volutpat@aol.net","Jul 6, 2025",80,"#83ef81","$46.38"),
+  ("Flavia Booker","viverra.donec@hotmail.net","Aug 29, 2023",80,"#062dc9","$32.88");
+INSERT INTO `vendas` (`nome`,`email`,`numberrange`,`idade`,`cores`,`venda`)
+VALUES
+  ("Zahir Moss","nibh.phasellus.nulla@icloud.ca","May 10, 2024",19,"#bc2d39","$36.22"),
+  ("Iliana Bush","in@yahoo.edu","May 4, 2023",62,"#1ae024","$90.40"),
+  ("Emerson Ortiz","risus.nunc.ac@icloud.couk","Feb 19, 2024",34,"#dcffa5","$27.07"),
+  ("Alec Crane","non.feugiat.nec@google.org","Aug 2, 2024",65,"#61f4d4","$43.44"),
+  ("Wesley Briggs","urna.vivamus@protonmail.com","Mar 24, 2025",37,"#aaffcf","$10.11"),
+  ("Keegan Perez","amet.luctus@google.net","Aug 5, 2023",89,"#bdd4f9","$29.08"),
+  ("MacKensie House","donec@outlook.net","Sep 15, 2024",88,"#89dbf9","$98.13"),
+  ("Genevieve Vasquez","cursus.a.enim@google.edu","Apr 14, 2025",16,"#2cba62","$25.97"),
+  ("Arthur Holland","tincidunt.congue@hotmail.edu","May 3, 2025",33,"#69d82d","$75.46"),
+  ("Mariko Shelton","faucibus.orci.luctus@hotmail.couk","Aug 19, 2023",67,"#ffccb5","$75.43");
+INSERT INTO `vendas` (`nome`,`email`,`numberrange`,`idade`,`cores`,`venda`)
+VALUES
+  ("Wade Olson","tempus@google.org","Jul 13, 2025",49,"#a034ed","$32.09"),
+  ("Bianca Mays","lacus.quisque.imperdiet@protonmail.edu","Oct 3, 2024",59,"#445cc4","$73.35"),
+  ("Aidan Stephenson","ut.nulla.cras@icloud.com","Feb 21, 2024",47,"#4bef39","$94.89"),
+  ("Troy Vaughn","blandit.viverra@icloud.ca","Feb 3, 2025",47,"#f4baeb","$6.96"),
+  ("Daquan Solomon","libero.donec@yahoo.ca","Mar 13, 2024",75,"#ea7ed8","$65.58"),
+  ("Reece Hurley","mi@aol.edu","Oct 22, 2024",89,"#32cbd1","$62.02"),
+  ("Quentin Chavez","sed.sem@google.com","Sep 25, 2024",66,"#ffc6d3","$29.56"),
+  ("Daniel Dyer","auctor.velit.eget@google.couk","Jul 14, 2023",63,"#298bb5","$12.65"),
+  ("Imogene Joseph","in.at.pede@protonmail.couk","Jan 29, 2023",74,"#4a30f2","$62.79"),
+  ("Scott Cummings","semper.pretium@yahoo.couk","Sep 8, 2023",60,"#40e883","$65.16");
+INSERT INTO `vendas` (`nome`,`email`,`numberrange`,`idade`,`cores`,`venda`)
+VALUES
+  ("Ima Blanchard","donec@yahoo.org","Apr 12, 2024",63,"#26b776","$96.86"),
+  ("Uriel Berry","tellus.aenean@icloud.ca","Jul 16, 2023",41,"#ea7ca1","$55.19"),
+  ("Ulla Vinson","viverra.donec@hotmail.org","Jun 3, 2023",40,"#42c9c2","$99.34"),
+  ("Dana Hunt","enim.nunc.ut@aol.org","Aug 17, 2024",41,"#c2f98b","$83.34"),
+  ("Melvin Frazier","torquent.per@protonmail.com","Feb 11, 2023",51,"#59a00e","$99.42"),
+  ("Freya Blankenship","nunc.interdum@yahoo.org","Mar 30, 2024",18,"#09126d","$88.46"),
+  ("Kirby Patterson","vulputate.eu@yahoo.ca","Sep 12, 2024",54,"#d339c9","$13.73"),
+  ("Candice Shepherd","dignissim.lacus@outlook.org","Jun 19, 2025",29,"#af3d1d","$18.47"),
+  ("Austin Russo","curabitur.sed@outlook.edu","Aug 17, 2024",59,"#e29b3d","$76.03"),
+  ("Ishmael Mendez","laoreet.posuere.enim@hotmail.org","Jul 21, 2024",35,"#b2eaf7","$38.18");
+INSERT INTO `vendas` (`nome`,`email`,`numberrange`,`idade`,`cores`,`venda`)
+VALUES
+  ("Iris Sampson","ligula.aenean@hotmail.edu","Nov 18, 2023",57,"#04efd0","$51.98"),
+  ("Julian Lyons","auctor@protonmail.couk","Aug 7, 2025",38,"#67ea6b","$51.84"),
+  ("Vance Byers","pharetra.nam.ac@yahoo.org","Jul 18, 2023",24,"#ffccfb","$29.60"),
+  ("Griffin Chen","sed.libero@protonmail.net","Feb 20, 2023",51,"#e562e5","$5.45"),
+  ("Josiah Leon","ultrices.posuere.cubilia@outlook.org","Feb 26, 2025",31,"#fa88fc","$43.99"),
+  ("Thomas Burt","molestie.orci@yahoo.ca","Mar 2, 2023",85,"#f4b2bf","$57.70"),
+  ("Valentine Kennedy","et.lacinia.vitae@protonmail.ca","Aug 17, 2025",69,"#eacd3a","$29.11"),
+  ("Thane Wagner","aliquet.vel.vulputate@hotmail.com","Apr 5, 2023",46,"#aaaaff","$7.75"),
+  ("Lesley Merrill","adipiscing.elit@yahoo.com","Sep 13, 2024",56,"#6fe2ae","$12.80"),
+  ("Roary Cobb","donec@aol.edu","Dec 17, 2023",68,"#4e50d8","$84.57");
+INSERT INTO `vendas` (`nome`,`email`,`numberrange`,`idade`,`cores`,`venda`)
+VALUES
+  ("Jasper Bradford","mus.proin@icloud.org","Jul 23, 2023",84,"#373496","$43.85"),
+  ("Ramona Sloan","vel.lectus@yahoo.ca","May 29, 2025",72,"#6de0a7","$94.45"),
+  ("Kirby Moran","turpis.vitae@protonmail.edu","Dec 20, 2023",24,"#ddd53b","$77.42"),
+  ("Ryder Gilbert","sed.pharetra.felis@aol.ca","Feb 4, 2024",79,"#ffcfc1","$44.19"),
+  ("Gareth Howe","tristique.aliquet@yahoo.org","Apr 27, 2024",75,"#7ed3ea","$12.63"),
+  ("Macey Richmond","blandit@outlook.couk","May 2, 2024",85,"#b0ffad","$56.78"),
+  ("Anastasia Mcdonald","sagittis.placerat@aol.com","Aug 6, 2025",60,"#a453db","$64.74"),
+  ("Briar Whitney","dignissim.magna.a@aol.edu","Sep 26, 2024",21,"#c050fc","$39.07"),
+  ("Patrick Le","facilisis@hotmail.couk","Dec 12, 2023",46,"#a9c4f9","$35.62"),
+  ("Price Alston","mollis.duis@hotmail.com","Feb 17, 2025",39,"#d784e0","$48.13");
+INSERT INTO `vendas` (`nome`,`email`,`numberrange`,`idade`,`cores`,`venda`)
+VALUES
+  ("Clayton Dalton","ullamcorper@icloud.org","Nov 19, 2023",50,"#e5cb06","$0.88"),
+  ("Otto Forbes","eu.eros@protonmail.com","Oct 12, 2023",19,"#5443c1","$14.96"),
+  ("Megan Murphy","at@hotmail.net","Aug 22, 2023",17,"#8bc423","$99.06"),
+  ("Ulric Ryan","augue@yahoo.couk","Jun 20, 2024",49,"#e0a860","$87.82"),
+  ("Lacy Jacobson","auctor.quis@google.com","May 31, 2024",64,"#9acde0","$12.62"),
+  ("Dolan Clark","egestas@yahoo.com","Sep 17, 2023",37,"#c00cd1","$14.78"),
+  ("Margaret Baxter","congue@outlook.com","Aug 7, 2025",33,"#b1e52d","$55.76"),
+  ("Inga Hoover","ut.pellentesque.eget@google.ca","Apr 14, 2025",53,"#c2fcab","$33.01"),
+  ("Hayden Bruce","ornare.libero@aol.net","Dec 29, 2024",60,"#f72c91","$54.82"),
+  ("Jared Best","amet.risus.donec@google.edu","Jun 16, 2024",32,"#a861f9","$45.37");
+INSERT INTO `vendas` (`nome`,`email`,`numberrange`,`idade`,`cores`,`venda`)
+VALUES
+  ("Bert Knox","maecenas.mi@hotmail.com","Jan 24, 2025",37,"#89f94d","$66.92"),
+  ("Dustin Mullins","nonummy@outlook.org","Sep 2, 2023",72,"#522bc6","$96.68"),
+  ("Lee Daniel","aliquam.fringilla.cursus@outlook.couk","Apr 1, 2024",33,"#c1385a","$37.67"),
+  ("Raven Hartman","neque.nullam.nisl@aol.net","Aug 2, 2024",87,"#00b774","$99.79"),
+  ("Keaton Myers","vestibulum.lorem.sit@protonmail.com","Mar 7, 2023",84,"#d269e0","$31.29"),
+  ("Hayden Mosley","ante@hotmail.couk","Sep 6, 2023",24,"#d095e5","$50.44"),
+  ("Joan Luna","dictum.phasellus.in@icloud.net","Nov 21, 2023",54,"#f4bb5f","$56.21"),
+  ("Hollee Whitfield","fermentum.convallis@outlook.ca","Jan 9, 2023",71,"#f7b7b2","$9.03"),
+  ("Thor Marsh","lacus@outlook.net","May 30, 2025",37,"#49cc72","$59.32"),
+  ("Dillon Reeves","magna.lorem@yahoo.com","Feb 22, 2024",54,"#a9a0e8","$82.15");
+INSERT INTO `vendas` (`nome`,`email`,`numberrange`,`idade`,`cores`,`venda`)
+VALUES
+  ("Janna Ewing","conubia.nostra@aol.couk","Feb 10, 2025",23,"#cc1c94","$37.15"),
+  ("Madaline Golden","pede.cum@yahoo.edu","Mar 21, 2023",34,"#74cc30","$23.53"),
+  ("Nina Massey","penatibus.et@hotmail.net","Feb 29, 2024",25,"#84ed99","$74.15"),
+  ("Odysseus Ochoa","vulputate.velit@aol.net","Nov 21, 2023",85,"#4b0984","$87.42"),
+  ("Rosalyn Fry","convallis.convallis@google.edu","Aug 26, 2024",19,"#d88250","$86.43"),
+  ("Kyra Holder","eleifend.egestas@outlook.ca","Jul 14, 2023",87,"#47f916","$49.06"),
+  ("Gwendolyn Hodge","aliquet@protonmail.org","Jun 20, 2023",62,"#5348ea","$84.70"),
+  ("Melodie Riggs","nibh@yahoo.org","May 3, 2023",41,"#41c69e","$81.29"),
+  ("Francis O'brien","a@yahoo.couk","Dec 27, 2023",73,"#ffb7e9","$48.01"),
+  ("Dexter Crane","lectus@google.org","Aug 22, 2023",58,"#e7fc99","$55.97");
+INSERT INTO `vendas` (`nome`,`email`,`numberrange`,`idade`,`cores`,`venda`)
+VALUES
+  ("Xantha Grant","metus.in.nec@icloud.couk","Feb 13, 2023",55,"#565def","$23.25"),
+  ("Emma Meyer","suspendisse.sed@google.couk","Jan 15, 2024",34,"#6df2e2","$0.78"),
+  ("Quentin Boyer","non.massa.non@aol.org","Oct 4, 2023",79,"#f477d1","$14.71"),
+  ("Beverly Bryant","pellentesque@google.com","Oct 26, 2023",68,"#afef56","$47.68"),
+  ("Lois Compton","mi.duis.risus@outlook.ca","Jul 10, 2025",40,"#abbefc","$12.26"),
+  ("Kirk Lara","duis@yahoo.edu","Oct 6, 2024",30,"#a78fe0","$82.59"),
+  ("Dylan Eaton","imperdiet.ullamcorper@icloud.edu","May 29, 2025",17,"#22a529","$33.25"),
+  ("Madison Short","aliquam.tincidunt.nunc@protonmail.ca","Jan 16, 2023",71,"#32ef10","$59.34"),
+  ("Gretchen Walsh","mollis.lectus.pede@outlook.edu","Feb 9, 2023",52,"#e01f7c","$42.19"),
+  ("Hiroko Clarke","felis.donec.tempor@hotmail.couk","Nov 10, 2024",50,"#537ae2","$53.17");
+INSERT INTO `vendas` (`nome`,`email`,`numberrange`,`idade`,`cores`,`venda`)
+VALUES
+  ("Cara Baird","nec.ligula@outlook.org","Feb 10, 2024",67,"#c3b0f4","$89.99"),
+  ("Edan Johnston","nullam@outlook.net","Feb 9, 2023",65,"#f76659","$45.47"),
+  ("Magee Steele","risus.at@yahoo.edu","May 13, 2024",50,"#c4cdfc","$67.53"),
+  ("Freya Kaufman","malesuada.fames@aol.ca","Feb 6, 2025",63,"#84d664","$32.83"),
+  ("Kareem Baxter","sit.amet@protonmail.edu","Jun 25, 2024",86,"#cce268","$84.93"),
+  ("Serina Guzman","ut.dolor.dapibus@outlook.net","Jun 16, 2024",19,"#fcc4ff","$18.32"),
+  ("Zachery Kirkland","convallis@yahoo.ca","Jul 24, 2025",63,"#e8ba94","$90.60"),
+  ("Daquan Stanton","donec.tincidunt@outlook.ca","Jan 5, 2025",26,"#74e074","$72.79"),
+  ("Boris Johnston","tincidunt.pede.ac@aol.net","Dec 11, 2023",45,"#17d31a","$23.52"),
+  ("Gavin Burks","ipsum.leo@hotmail.com","Jul 7, 2023",28,"#f26b4d","$95.98");
+INSERT INTO `vendas` (`nome`,`email`,`numberrange`,`idade`,`cores`,`venda`)
+VALUES
+  ("Raven Ramirez","tincidunt.orci@icloud.org","May 2, 2025",74,"#df77e5","$21.69"),
+  ("Lance Ferguson","imperdiet.ornare@aol.net","Mar 17, 2024",28,"#3dc63f","$62.51"),
+  ("Benjamin Stewart","augue@yahoo.couk","May 27, 2023",18,"#58f4b6","$90.79"),
+  ("Cade Gallagher","convallis.dolor@outlook.org","Mar 19, 2025",22,"#d33d6f","$30.43"),
+  ("Austin Cote","dui.augue@outlook.net","Aug 26, 2024",36,"#be73f4","$21.78"),
+  ("Honorato Sparks","velit.dui@hotmail.ca","Jul 18, 2024",67,"#b314e8","$61.68"),
+  ("Kitra Mcintosh","commodo@outlook.ca","Dec 4, 2024",62,"#e5a36e","$34.56"),
+  ("Vivien Gibbs","at.nisi@aol.org","Aug 28, 2025",72,"#c9ef7c","$31.57"),
+  ("Vernon Kent","risus.nunc@protonmail.edu","Dec 23, 2024",70,"#71fc92","$21.66"),
+  ("Tamekah Hendricks","tincidunt.congue@yahoo.com","Jan 26, 2023",25,"#0f8962","$56.06");
+INSERT INTO `vendas` (`nome`,`email`,`numberrange`,`idade`,`cores`,`venda`)
+VALUES
+  ("Baker Jacobson","a@google.org","Jul 18, 2025",43,"#8ba0d3","$71.47"),
+  ("Perry Mendoza","natoque.penatibus@icloud.com","Sep 9, 2024",23,"#54f29b","$76.49"),
+  ("Jescie Dean","consectetuer.adipiscing@hotmail.couk","Dec 29, 2023",58,"#1af2e3","$91.98"),
+  ("Barclay Delaney","molestie.dapibus@aol.org","Jan 30, 2023",50,"#ebb3f2","$24.10"),
+  ("Denise Bartlett","eu.elit@icloud.org","Jun 28, 2024",66,"#dd7c73","$63.22"),
+  ("Aristotle Watkins","proin.ultrices@icloud.ca","Aug 20, 2025",18,"#11d832","$72.16"),
+  ("Unity Hayden","eget.dictum@google.ca","Sep 20, 2024",34,"#ce1c0c","$35.19"),
+  ("Griffith Ware","sed.pede@google.couk","Dec 7, 2024",82,"#3d49e5","$71.53"),
+  ("McKenzie Hubbard","dapibus.gravida@icloud.net","May 6, 2025",58,"#e397f4","$89.35"),
+  ("Nayda Thornton","odio.etiam.ligula@aol.edu","Dec 14, 2023",21,"#19d3b7","$48.67");
+INSERT INTO `vendas` (`nome`,`email`,`numberrange`,`idade`,`cores`,`venda`)
+VALUES
+  ("Wesley Cantu","felis.purus@yahoo.couk","Nov 17, 2023",38,"#95f4be","$33.47"),
+  ("Cleo Bernard","ante.maecenas.mi@google.edu","Jul 26, 2024",73,"#d633a8","$66.73"),
+  ("Scarlet Powers","odio.aliquam.vulputate@outlook.net","Jan 19, 2023",79,"#f42750","$21.74"),
+  ("Miriam Murphy","interdum.feugiat@yahoo.org","May 5, 2024",87,"#29c688","$76.21"),
+  ("Curran Lawrence","nisi.aenean@google.com","Feb 19, 2025",54,"#ec4ef4","$44.40"),
+  ("Camilla Mcdowell","non.bibendum@outlook.org","Jun 8, 2024",67,"#b2a1f4","$19.45"),
+  ("Madaline Jones","sagittis.semper@aol.ca","Jun 22, 2025",26,"#6f93f7","$75.40"),
+  ("Raja Sellers","et.magnis@outlook.com","Jul 17, 2023",62,"#88fcb0","$71.38"),
+  ("Joelle Rowe","egestas.duis@icloud.org","Aug 10, 2025",53,"#05ffee","$95.82"),
+  ("Sarah Weiss","donec.feugiat@outlook.com","Aug 12, 2024",82,"#008e72","$67.41");
+INSERT INTO `vendas` (`nome`,`email`,`numberrange`,`idade`,`cores`,`venda`)
+VALUES
+  ("Kirk Best","amet.lorem.semper@aol.net","Sep 13, 2024",41,"#974ae0","$54.91"),
+  ("Flynn Torres","interdum@protonmail.ca","Apr 11, 2023",83,"#c9db25","$72.15"),
+  ("Barrett West","dignissim.pharetra@hotmail.com","Jun 26, 2025",35,"#3664d8","$69.86"),
+  ("Duncan Parsons","aliquet.lobortis@icloud.couk","Nov 8, 2023",85,"#f230b1","$49.71"),
+  ("Amethyst Whitney","cursus.nunc.mauris@hotmail.com","Sep 26, 2024",42,"#fcc2c9","$39.67"),
+  ("Salvador Mcconnell","sem.mollis.dui@icloud.net","May 17, 2023",45,"#3aa6d8","$36.31"),
+  ("Judah Simmons","erat@outlook.net","May 19, 2024",90,"#d1ef99","$98.68"),
+  ("Michael Bernard","congue.elit.sed@outlook.org","Oct 29, 2024",80,"#021dd1","$28.18"),
+  ("Shelley Ramirez","sed.libero@aol.org","Sep 17, 2024",16,"#d6c231","$48.18"),
+  ("Hop Benton","nunc.quis@outlook.org","Oct 22, 2023",34,"#95f4ce","$17.84");
+INSERT INTO `vendas` (`nome`,`email`,`numberrange`,`idade`,`cores`,`venda`)
+VALUES
+  ("John Morrison","vitae.erat.vel@protonmail.couk","May 23, 2024",64,"#82f280","$53.50"),
+  ("Keefe Anderson","purus@hotmail.org","May 2, 2023",71,"#ea5d25","$79.65"),
+  ("Lavinia Preston","fusce@aol.ca","Jul 30, 2023",44,"#52ce88","$64.63"),
+  ("Juliet Gordon","velit.quisque@hotmail.edu","Jul 25, 2023",46,"#71e8d8","$3.04"),
+  ("Bryar Best","sed.congue@aol.couk","Nov 30, 2023",89,"#81ea6b","$57.63"),
+  ("May Logan","vulputate.mauris@hotmail.edu","Aug 3, 2024",51,"#5756b7","$77.17"),
+  ("Rhonda Gould","at.velit@icloud.com","Jul 15, 2025",61,"#dd82e0","$49.99"),
+  ("Hanae Hays","pretium.et.rutrum@outlook.net","Dec 27, 2024",43,"#10b724","$86.46"),
+  ("Simone Blair","lorem.ipsum.dolor@yahoo.couk","Jan 15, 2023",40,"#e599fc","$9.04"),
+  ("Ebony Solomon","sit.amet@outlook.edu","Dec 11, 2024",69,"#65b8d8","$85.01");
+INSERT INTO `vendas` (`nome`,`email`,`numberrange`,`idade`,`cores`,`venda`)
+VALUES
+  ("Yoshio Strong","sociis.natoque@aol.couk","Nov 16, 2024",84,"#f4846e","$72.09"),
+  ("Zenia Dillon","dictum.eu@yahoo.ca","Feb 28, 2025",44,"#fcd7c4","$73.49"),
+  ("Galvin Berg","metus.vivamus@yahoo.com","Jun 2, 2024",26,"#f4adc3","$90.35"),
+  ("Bernard Robinson","orci.luctus@icloud.org","Dec 2, 2024",47,"#b19ef7","$73.04"),
+  ("Jason Cohen","magna.nec@outlook.couk","Apr 18, 2024",21,"#5f1de2","$14.15"),
+  ("Lyle Ramsey","aliquam.auctor@protonmail.org","Dec 9, 2024",24,"#2ed360","$86.25"),
+  ("Minerva Strong","elit.dictum@icloud.edu","Feb 6, 2025",44,"#5b59e5","$21.80"),
+  ("Tatiana Coleman","a.enim@yahoo.ca","Dec 23, 2024",49,"#a2cee5","$23.21"),
+  ("Blaze Baldwin","luctus@google.net","Nov 19, 2023",35,"#1837ce","$44.90"),
+  ("Roanna Casey","a.tortor@google.com","Jul 8, 2025",64,"#ed63b3","$65.20");
+INSERT INTO `vendas` (`nome`,`email`,`numberrange`,`idade`,`cores`,`venda`)
+VALUES
+  ("Mariam Vazquez","nec.diam@yahoo.net","Nov 25, 2023",44,"#548cbc","$73.69"),
+  ("Scott Foster","magna.a@protonmail.edu","Jun 6, 2024",30,"#f2485c","$26.83"),
+  ("Palmer Bolton","habitant.morbi.tristique@protonmail.com","May 29, 2023",75,"#18bf09","$90.43"),
+  ("Felix Blackwell","primis.in@icloud.com","Jan 27, 2023",66,"#f2afab","$69.68"),
+  ("Gabriel Taylor","volutpat.ornare.facilisis@hotmail.com","Sep 29, 2023",34,"#818ad1","$98.95"),
+  ("Noah Battle","commodo@hotmail.com","Feb 23, 2023",20,"#e2671f","$72.39"),
+  ("Teegan Gilbert","ipsum.ac@protonmail.couk","May 4, 2025",27,"#fc94f3","$35.01"),
+  ("Eric Fowler","nunc.ac@outlook.net","Jun 30, 2024",80,"#0eb590","$93.16"),
+  ("Oprah Lucas","neque.in@aol.com","Feb 9, 2025",38,"#8bf484","$69.39"),
+  ("Slade Petty","sed.pharetra@google.net","Dec 19, 2023",88,"#2222d6","$81.66");
+INSERT INTO `vendas` (`nome`,`email`,`numberrange`,`idade`,`cores`,`venda`)
+VALUES
+  ("Kameko Daugherty","aliquet.magna@hotmail.net","Jan 14, 2025",28,"#d34c77","$7.88"),
+  ("Scott Rich","orci.luctus.et@icloud.net","May 9, 2023",63,"#e549c6","$31.06"),
+  ("Lacey Garza","quam.a.felis@hotmail.edu","Sep 26, 2023",33,"#ea9ad2","$31.58"),
+  ("Wade Noel","convallis.ante.lectus@icloud.ca","Jul 7, 2023",61,"#113775","$12.82"),
+  ("Summer Boyer","primis.in@google.edu","Mar 22, 2023",70,"#9ffc3c","$64.02"),
+  ("Plato Douglas","per@yahoo.org","Sep 29, 2023",37,"#621d93","$69.81"),
+  ("Chaim May","euismod.enim@protonmail.edu","Jan 7, 2025",24,"#014a60","$88.88"),
+  ("Craig Olson","risus@hotmail.ca","Jul 20, 2025",81,"#f475b5","$3.38"),
+  ("Melanie Wynn","diam.at@aol.ca","Apr 12, 2023",71,"#8ef9e6","$79.62"),
+  ("Leonard Richard","dolor@outlook.net","Aug 14, 2023",21,"#56ea9b","$20.90");
+INSERT INTO `vendas` (`nome`,`email`,`numberrange`,`idade`,`cores`,`venda`)
+VALUES
+  ("Kirestin Ewing","nec.leo@protonmail.com","Oct 8, 2024",65,"#4efcdc","$88.88"),
+  ("Orson Conner","in.ornare@yahoo.couk","Mar 27, 2025",53,"#22b527","$91.68"),
+  ("Ronan Ramirez","egestas@protonmail.couk","Aug 25, 2024",50,"#97e510","$26.29"),
+  ("Samantha O'connor","ullamcorper.duis@protonmail.couk","Sep 24, 2024",85,"#e524c2","$21.08"),
+  ("Lyle Mcgowan","orci.tincidunt@google.org","Aug 4, 2024",38,"#2b9ea0","$89.05"),
+  ("Blake Farley","orci@yahoo.couk","Jun 30, 2023",49,"#0eba8f","$43.99"),
+  ("Pandora Beasley","duis.sit@protonmail.net","Jan 10, 2024",41,"#39f424","$74.33"),
+  ("Fuller Rivas","nulla.facilisi.sed@hotmail.org","Nov 22, 2024",38,"#2c4ae0","$55.49"),
+  ("Wanda Benton","mus.proin@protonmail.ca","Jun 30, 2023",88,"#5dcc08","$71.65"),
+  ("Roth Beck","suscipit@protonmail.org","Dec 8, 2024",42,"#efab7a","$23.44");
+INSERT INTO `vendas` (`nome`,`email`,`numberrange`,`idade`,`cores`,`venda`)
+VALUES
+  ("Hayfa Ford","consequat@aol.ca","Dec 21, 2023",52,"#54f968","$83.01"),
+  ("Brandon Blackwell","mollis@protonmail.com","Nov 20, 2024",51,"#d9f47f","$98.19"),
+  ("Simon Huff","urna.suscipit.nonummy@yahoo.ca","Apr 3, 2023",85,"#db20c8","$55.51"),
+  ("Colton Mercer","mi.felis@aol.ca","Oct 1, 2024",57,"#db598d","$46.44"),
+  ("Hop O'connor","lacus.nulla@yahoo.net","Aug 19, 2024",50,"#7bef4a","$84.60"),
+  ("Hyacinth Jefferson","ut@google.ca","Jul 2, 2024",19,"#f4b7db","$57.38"),
+  ("Teagan Mclean","semper.tellus@protonmail.net","Feb 1, 2024",33,"#688c0c","$60.36"),
+  ("Neville Hunt","dolor.nulla.semper@protonmail.net","Apr 24, 2024",25,"#dd81f9","$11.28"),
+  ("Ora Conner","luctus@icloud.edu","Jan 16, 2025",55,"#7fed50","$33.03"),
+  ("Shay Brown","dictum.cursus@icloud.com","Oct 30, 2023",82,"#5f58f4","$53.41");
+INSERT INTO `vendas` (`nome`,`email`,`numberrange`,`idade`,`cores`,`venda`)
+VALUES
+  ("Beau Olsen","orci.lobortis@yahoo.ca","Dec 10, 2023",69,"#6bea6e","$72.75"),
+  ("Rebekah Booth","enim@outlook.org","Sep 20, 2023",68,"#c90a80","$45.05"),
+  ("Uriah Hunt","vehicula.risus@google.edu","Oct 15, 2023",70,"#ffc9d1","$6.94"),
+  ("Orson Soto","quis.accumsan@google.net","Apr 26, 2024",58,"#6666c1","$15.75"),
+  ("Ivory Walls","et.magnis@yahoo.edu","Jun 11, 2025",52,"#a4c5f4","$57.74"),
+  ("Steven Keller","neque@icloud.couk","Aug 7, 2025",45,"#4423a0","$15.20"),
+  ("Gemma Schneider","aenean@protonmail.com","May 5, 2024",40,"#c2acf9","$42.71"),
+  ("Yuri Davidson","nec@protonmail.org","Nov 17, 2024",85,"#b2ffee","$93.44"),
+  ("Rebekah Crawford","ipsum.curabitur@protonmail.ca","May 10, 2023",67,"#d4f47a","$90.15"),
+  ("Alvin Griffith","interdum.enim.non@google.com","Mar 31, 2023",25,"#93f2cc","$13.76");
+INSERT INTO `vendas` (`nome`,`email`,`numberrange`,`idade`,`cores`,`venda`)
+VALUES
+  ("Gray Marsh","nec@protonmail.couk","Mar 5, 2023",57,"#edb942","$27.47"),
+  ("Susan Buckley","ornare.tortor.at@aol.org","Mar 22, 2024",79,"#c90685","$23.52"),
+  ("Bertha Wilkerson","nunc.mauris.elit@aol.couk","Mar 9, 2024",81,"#2fb0bf","$47.32"),
+  ("Serena Harvey","egestas.lacinia@protonmail.couk","Oct 31, 2023",58,"#cc26c0","$71.92"),
+  ("Karen Sears","sem.egestas.blandit@protonmail.org","May 26, 2023",88,"#23528e","$87.39"),
+  ("Elvis Battle","sed@hotmail.ca","Feb 20, 2025",74,"#f4b0ad","$52.12"),
+  ("Carlos Peck","sed.dui@protonmail.org","Mar 23, 2025",31,"#8cff5b","$8.73"),
+  ("Joel Ellison","sapien@outlook.com","May 13, 2024",83,"#e22f92","$7.37"),
+  ("Seth Soto","curae.donec.tincidunt@hotmail.net","May 10, 2025",84,"#fcb667","$82.20"),
+  ("Charde England","mi@protonmail.net","Jan 13, 2025",17,"#ffc9eb","$26.49");
+INSERT INTO `vendas` (`nome`,`email`,`numberrange`,`idade`,`cores`,`venda`)
+VALUES
+  ("Amelia Hutchinson","sem.magna@protonmail.couk","Mar 5, 2024",17,"#2b70a5","$33.22"),
+  ("Colton Bradford","iaculis.nec@google.ca","Aug 26, 2023",78,"#8134bc","$93.73"),
+  ("Inez Black","imperdiet.ornare.in@hotmail.edu","May 14, 2023",52,"#14a00c","$89.34"),
+  ("Kermit Sandoval","amet.consectetuer@icloud.net","Sep 6, 2024",21,"#5050af","$98.71"),
+  ("Tobias Meyers","cras.dolor@hotmail.ca","May 18, 2025",51,"#4bcc83","$9.08"),
+  ("Yasir Reyes","amet@hotmail.org","Feb 18, 2024",44,"#a87acc","$82.81"),
+  ("Raymond Lawrence","arcu@yahoo.ca","Nov 2, 2023",48,"#9f61f4","$51.82"),
+  ("Reed Skinner","quisque.porttitor@aol.edu","Dec 27, 2024",69,"#067499","$96.76"),
+  ("Lilah Mcneil","et.tristique.pellentesque@google.ca","Jun 13, 2023",36,"#b2ffe2","$62.87"),
+  ("Wallace Brown","sit.amet@protonmail.org","Nov 8, 2024",82,"#fc8f9c","$92.91");
+INSERT INTO `vendas` (`nome`,`email`,`numberrange`,`idade`,`cores`,`venda`)
+VALUES
+  ("Dana Strickland","eu@yahoo.couk","Apr 18, 2025",83,"#adea56","$26.66"),
+  ("Samantha Mcdaniel","luctus.vulputate@hotmail.edu","Nov 24, 2023",46,"#58e26f","$8.72"),
+  ("Kitra Oneal","hendrerit.donec@icloud.edu","Dec 26, 2024",43,"#ed7112","$91.16"),
+  ("Eugenia Page","et.netus.et@icloud.edu","Aug 24, 2025",60,"#e5f257","$86.14"),
+  ("Hamish Rollins","eu.turpis@protonmail.edu","Jun 23, 2024",32,"#35cc24","$88.49"),
+  ("Dylan Valenzuela","id.magna@yahoo.org","Sep 1, 2023",26,"#92f24d","$84.66"),
+  ("Lucian Bird","vitae.purus@outlook.edu","Mar 25, 2024",62,"#1fc4a8","$20.77"),
+  ("Lysandra Whitfield","egestas.sed@outlook.net","Aug 7, 2024",72,"#dd4072","$60.50"),
+  ("Hayfa Trujillo","risus.nunc@yahoo.couk","Dec 26, 2023",30,"#6ef450","$37.36"),
+  ("Chadwick Webb","nulla.eget@protonmail.org","Jan 1, 2025",35,"#61edd8","$87.40");
+INSERT INTO `vendas` (`nome`,`email`,`numberrange`,`idade`,`cores`,`venda`)
+VALUES
+  ("Cara Campos","non.dapibus@protonmail.com","Jan 31, 2025",41,"#f9c37c","$61.59"),
+  ("Aretha Bauer","pretium.neque@hotmail.edu","Oct 10, 2023",58,"#f00ef4","$31.85"),
+  ("Arden Hodges","suspendisse.sagittis@google.couk","Jun 20, 2025",67,"#808c02","$6.78"),
+  ("Bert Schroeder","cursus.vestibulum@aol.org","Jul 16, 2024",67,"#8f46ba","$96.87"),
+  ("Kaye Hahn","mauris.integer.sem@yahoo.edu","May 12, 2025",36,"#3f36e2","$57.89"),
+  ("Ina Marquez","duis.cursus@yahoo.edu","Dec 30, 2024",33,"#8e6bd3","$29.47"),
+  ("Jaden Ratliff","eget.dictum@hotmail.couk","Aug 13, 2025",73,"#75f984","$83.95"),
+  ("Camden Sanchez","nisi.dictum.augue@protonmail.com","Feb 16, 2025",85,"#b074c9","$88.77"),
+  ("Erasmus Tyson","etiam.imperdiet@hotmail.ca","Jul 20, 2024",77,"#fff4ad","$81.24"),
+  ("Callie Oliver","et@outlook.ca","Oct 24, 2023",78,"#3ee5e8","$38.81");
+INSERT INTO `vendas` (`nome`,`email`,`numberrange`,`idade`,`cores`,`venda`)
+VALUES
+  ("Theodore Mendez","proin@yahoo.ca","May 27, 2024",33,"#1e75a0","$74.99"),
+  ("Clare Carrillo","sit.amet@hotmail.com","Mar 21, 2025",36,"#ba362c","$11.87"),
+  ("Giacomo Wells","sit.amet@google.ca","Feb 29, 2024",54,"#ead08a","$16.78"),
+  ("Nora Mcintosh","egestas.blandit@protonmail.ca","Apr 12, 2025",81,"#6eddd4","$10.20"),
+  ("Sydney Velazquez","metus@google.org","Mar 15, 2023",35,"#24348c","$63.41"),
+  ("Jordan Wilson","enim.nisl.elementum@aol.ca","Mar 3, 2023",45,"#aefce4","$18.60"),
+  ("Neil Mccormick","ut.erat@aol.edu","Oct 27, 2024",25,"#ffcccf","$48.18"),
+  ("Nelle Atkinson","orci.lacus.vestibulum@aol.ca","Aug 18, 2023",82,"#edcd02","$75.63"),
+  ("Patricia Gay","vitae@hotmail.couk","Mar 4, 2025",56,"#bf523f","$77.77"),
+  ("Elton Fulton","arcu.curabitur.ut@google.edu","Jun 27, 2024",32,"#6889d8","$26.14");
+INSERT INTO `vendas` (`nome`,`email`,`numberrange`,`idade`,`cores`,`venda`)
+VALUES
+  ("Gregory Pena","a@yahoo.net","Apr 11, 2025",60,"#ce7239","$9.98"),
+  ("Candice Cervantes","aliquet.proin.velit@aol.edu","Jan 29, 2024",77,"#abe587","$20.43"),
+  ("Bo Aguilar","orci.lacus@icloud.edu","Aug 20, 2024",20,"#71ba05","$89.28"),
+  ("Maggy Hodges","a.purus@hotmail.edu","Oct 8, 2024",57,"#94ef9c","$81.07"),
+  ("Robert Gonzalez","phasellus.vitae@protonmail.couk","Mar 23, 2025",34,"#3bd389","$36.79"),
+  ("Petra Wilkins","et@yahoo.ca","Sep 2, 2023",84,"#e05f08","$99.73"),
+  ("Portia Craig","sodales.elit@aol.ca","Nov 23, 2024",18,"#6aa1d1","$7.17"),
+  ("Cassady Wilder","interdum@hotmail.com","Nov 29, 2024",32,"#dd6c76","$9.09"),
+  ("Austin O'brien","dignissim.lacus@protonmail.org","Jan 19, 2024",30,"#bc7523","$62.51"),
+  ("Ivory Rodriquez","netus.et.malesuada@yahoo.couk","Feb 3, 2023",82,"#055f8c","$46.50");
+INSERT INTO `vendas` (`nome`,`email`,`numberrange`,`idade`,`cores`,`venda`)
+VALUES
+  ("Todd Salas","quis.arcu.vel@yahoo.org","Sep 7, 2024",64,"#fce84e","$62.81"),
+  ("Jared Rhodes","erat@aol.org","Aug 28, 2024",44,"#bf37ce","$52.45"),
+  ("Damian Wooten","in.felis@aol.net","Mar 8, 2024",71,"#4bdd7e","$39.58"),
+  ("Patrick Sweet","mattis@icloud.org","Dec 3, 2023",44,"#f7c5b4","$22.29"),
+  ("Gloria Robinson","ornare.lectus@hotmail.com","Aug 5, 2024",37,"#f2ab26","$33.11"),
+  ("Daniel Dunlap","montes.nascetur@icloud.couk","Apr 8, 2025",70,"#04963e","$67.97"),
+  ("Yolanda Watts","ridiculus@yahoo.com","Mar 16, 2024",25,"#a9fcf1","$6.50"),
+  ("Libby Potts","quisque.ac.libero@outlook.couk","May 27, 2024",57,"#db1c98","$72.21"),
+  ("Phillip Landry","varius.ultrices@icloud.net","May 11, 2023",83,"#537704","$69.67"),
+  ("Ian Morrison","congue.elit@google.ca","Jul 3, 2025",73,"#f78a79","$97.51");
+INSERT INTO `vendas` (`nome`,`email`,`numberrange`,`idade`,`cores`,`venda`)
+VALUES
+  ("Rebekah Cash","arcu@protonmail.ca","Mar 2, 2023",66,"#24f227","$78.16"),
+  ("Martha Foreman","ipsum.dolor@google.org","May 29, 2023",61,"#93f295","$37.41"),
+  ("Armando Chavez","phasellus@hotmail.ca","Jun 13, 2024",73,"#f9f57f","$11.30"),
+  ("Daryl Hobbs","posuere.enim.nisl@outlook.ca","May 4, 2025",38,"#7aad27","$54.74"),
+  ("Grady Bradley","est.ac@google.org","Dec 20, 2023",46,"#8cc1ea","$89.97"),
+  ("Ulric Mcbride","aenean.massa@google.org","Jan 2, 2023",78,"#dd6254","$37.40"),
+  ("Vaughan Dominguez","porttitor@icloud.edu","Jan 6, 2023",38,"#bf5cdb","$79.07"),
+  ("Athena Brock","ac.turpis@google.ca","Sep 16, 2024",54,"#911fe2","$76.54"),
+  ("Merritt Willis","vivamus@protonmail.edu","Jun 5, 2025",82,"#ed6ace","$37.92"),
+  ("Shafira Mueller","metus@icloud.org","Jun 1, 2025",35,"#31ce23","$90.64");
+INSERT INTO `vendas` (`nome`,`email`,`numberrange`,`idade`,`cores`,`venda`)
+VALUES
+  ("Sierra Berger","lacus.quisque@outlook.com","Sep 12, 2024",25,"#e1f902","$14.43"),
+  ("Jameson Moran","augue.scelerisque@google.couk","Feb 8, 2023",77,"#f9b86d","$88.79"),
+  ("Jayme Hughes","vel.convallis@google.org","May 17, 2024",43,"#f2c9ff","$21.50"),
+  ("Herrod Goodwin","rutrum.justo@aol.com","May 11, 2025",57,"#6274e5","$61.96"),
+  ("Rama Browning","malesuada.malesuada.integer@aol.ca","Dec 25, 2023",31,"#00b2ac","$91.94"),
+  ("Callum Delgado","eu.augue.porttitor@icloud.edu","Mar 27, 2025",69,"#7371ce","$59.76"),
+  ("Neville Myers","habitant.morbi@outlook.org","Jun 12, 2023",31,"#38ad24","$62.85"),
+  ("Nash Mills","pulvinar@yahoo.edu","Oct 2, 2024",45,"#aca1ea","$92.70"),
+  ("Chiquita Jackson","est.nunc@google.org","Aug 26, 2024",59,"#8bef5d","$4.12"),
+  ("Declan Montoya","viverra@icloud.org","May 24, 2024",89,"#ce163b","$5.18");
+INSERT INTO `vendas` (`nome`,`email`,`numberrange`,`idade`,`cores`,`venda`)
+VALUES
+  ("Marcia William","rutrum.non@hotmail.edu","Mar 10, 2025",23,"#91eac9","$18.12"),
+  ("Cherokee Swanson","eget.metus@protonmail.edu","Oct 8, 2023",85,"#ef4c83","$6.98"),
+  ("Dieter Dickerson","vel@protonmail.org","Mar 20, 2025",71,"#a3fc76","$39.59"),
+  ("Isabella Ware","ornare.tortor@google.couk","Feb 13, 2025",57,"#96f975","$20.83"),
+  ("Roary Yates","erat.vel@yahoo.com","Sep 3, 2024",68,"#e21d3e","$42.14"),
+  ("Jenna Hanson","nunc.ac@google.ca","Dec 14, 2023",88,"#76ed53","$76.09"),
+  ("Iona Fernandez","quisque.tincidunt@hotmail.org","Jul 14, 2023",73,"#6daece","$7.68"),
+  ("Macey Hanson","non.sapien@protonmail.edu","Aug 6, 2023",22,"#ef9e2d","$29.62"),
+  ("Lara Baird","lobortis.risus@google.com","Sep 5, 2023",68,"#e06d9d","$2.62"),
+  ("Mercedes Wood","vel.nisl@icloud.org","Aug 3, 2023",34,"#0467d8","$36.00");
+INSERT INTO `vendas` (`nome`,`email`,`numberrange`,`idade`,`cores`,`venda`)
+VALUES
+  ("Noah Hamilton","tristique.senectus@google.couk","Nov 3, 2024",73,"#f41e02","$54.81"),
+  ("Upton Everett","ante@hotmail.edu","Apr 11, 2023",89,"#211577","$68.20"),
+  ("Zahir Schmidt","auctor@outlook.ca","Jan 24, 2024",67,"#1bfc75","$58.94"),
+  ("Anastasia Blankenship","curabitur@yahoo.net","Sep 27, 2023",46,"#88e8cd","$87.51"),
+  ("Gil Vargas","mollis@outlook.couk","Jan 9, 2025",76,"#9787d3","$30.50"),
+  ("Britanney Saunders","sit.amet@aol.com","Mar 28, 2023",32,"#5e81db","$46.52"),
+  ("Chester Cortez","feugiat@protonmail.ca","Jan 11, 2024",43,"#ffb2e8","$30.02"),
+  ("Uriel Barker","felis@yahoo.net","Aug 18, 2024",22,"#8069c6","$95.70"),
+  ("Rosalyn Yang","feugiat.nec@aol.com","Oct 12, 2024",30,"#c364d6","$27.52"),
+  ("Hiram Pittman","auctor.nunc.nulla@google.edu","Feb 10, 2025",20,"#c4604a","$37.89");
+INSERT INTO `vendas` (`nome`,`email`,`numberrange`,`idade`,`cores`,`venda`)
+VALUES
+  ("Scott Bryan","eleifend@google.com","Jan 29, 2024",76,"#91c0ea","$67.73"),
+  ("Joshua Haney","dui.nec@hotmail.ca","Apr 5, 2025",55,"#e27177","$16.54"),
+  ("Chester Garner","tellus.nunc@hotmail.com","Jun 11, 2025",87,"#daff84","$71.76"),
+  ("Prescott Beard","pede.praesent@outlook.net","May 13, 2024",18,"#61b529","$30.93"),
+  ("Edward Guy","enim.suspendisse@protonmail.couk","Sep 29, 2024",53,"#69eac3","$30.52"),
+  ("Abdul Jackson","dictum.sapien.aenean@google.com","Sep 19, 2023",17,"#40d6c7","$75.23"),
+  ("Brody Dickson","diam@aol.ca","Jan 19, 2024",74,"#2f3dd6","$85.92"),
+  ("Roth Cortez","mauris.sapien@google.com","Dec 29, 2024",61,"#c2b8f2","$27.06"),
+  ("Lillian Cabrera","purus.maecenas.libero@yahoo.edu","May 22, 2024",26,"#5cef13","$46.43"),
+  ("Zia Vaughn","sed@icloud.couk","Jan 26, 2024",44,"#3e4ba0","$62.43");
+INSERT INTO `vendas` (`nome`,`email`,`numberrange`,`idade`,`cores`,`venda`)
+VALUES
+  ("Emery Wyatt","quam.vel@aol.com","Jul 23, 2024",74,"#a1fcd3","$50.66"),
+  ("Kadeem Luna","vestibulum.accumsan@google.edu","May 13, 2023",62,"#f4cc9f","$10.73"),
+  ("Isaac Alvarado","ultricies.ligula@hotmail.org","Jun 4, 2024",65,"#90ed89","$99.16"),
+  ("Claudia Estrada","ipsum.non@aol.edu","Sep 27, 2024",41,"#92ef93","$98.02"),
+  ("Macey Chang","mi@google.net","Feb 21, 2023",83,"#f93993","$87.00"),
+  ("Anne Haney","purus.mauris@icloud.ca","May 1, 2025",45,"#2eb2a0","$8.17"),
+  ("Judith Lindsey","risus@outlook.edu","Nov 20, 2023",65,"#279fc6","$25.31"),
+  ("Priscilla Mcclure","rutrum.non@icloud.org","Jul 28, 2024",42,"#85fce0","$49.90"),
+  ("Ray Beard","arcu.morbi.sit@icloud.ca","Jan 20, 2023",89,"#d61d77","$40.93"),
+  ("Zephr Duke","fusce.aliquet.magna@icloud.edu","Jul 6, 2025",20,"#fccac4","$58.45");
+INSERT INTO `vendas` (`nome`,`email`,`numberrange`,`idade`,`cores`,`venda`)
+VALUES
+  ("Hoyt Brewer","erat@outlook.ca","Jun 8, 2025",42,"#58e864","$97.26"),
+  ("Michelle Juarez","enim.nisl@icloud.ca","Apr 8, 2025",65,"#dfccff","$40.11"),
+  ("Tallulah Serrano","amet.ornare@google.ca","Jul 27, 2024",65,"#efe821","$28.08"),
+  ("Joseph Mendez","nunc@aol.com","Jan 15, 2024",69,"#f29f8c","$51.36"),
+  ("Baxter Blair","amet@hotmail.com","Dec 27, 2024",40,"#ff0ad2","$91.34"),
+  ("Paula Orr","sit.amet.dapibus@outlook.net","Aug 28, 2024",65,"#edb55c","$83.81"),
+  ("Yeo Cleveland","diam.duis@hotmail.com","Dec 30, 2023",51,"#47c930","$67.16"),
+  ("Michael Blair","magna.et@yahoo.edu","Feb 19, 2024",61,"#31c908","$8.89"),
+  ("Carissa Davenport","et.ultrices@google.couk","May 21, 2025",38,"#ef59f7","$86.25"),
+  ("Irene Talley","sem.nulla@protonmail.couk","Oct 2, 2024",60,"#ffc6da","$25.75");
+INSERT INTO `vendas` (`nome`,`email`,`numberrange`,`idade`,`cores`,`venda`)
+VALUES
+  ("Samuel Roy","fusce.dolor@google.com","Mar 5, 2023",20,"#22b743","$30.92"),
+  ("Karly Howe","orci.quis@outlook.com","Jan 11, 2024",67,"#10a339","$86.67"),
+  ("Germaine Yang","est.mauris.rhoncus@aol.com","Feb 24, 2024",32,"#7cffb3","$14.31"),
+  ("Ethan Higgins","consequat.lectus.sit@google.edu","Nov 15, 2024",70,"#56fff0","$72.02"),
+  ("Tanisha Dominguez","dui.cum@protonmail.edu","Apr 27, 2025",39,"#7c7fff","$50.33"),
+  ("Orla Shaw","sed@icloud.net","May 22, 2025",73,"#2b07af","$30.00"),
+  ("Quamar Waller","feugiat.placerat@icloud.net","Jan 6, 2023",79,"#ccfaff","$10.38"),
+  ("Elmo Clark","sed@yahoo.couk","Mar 17, 2024",87,"#c6cfff","$55.10"),
+  ("Alyssa Kidd","luctus@icloud.org","Dec 30, 2023",63,"#cdbdfc","$3.34"),
+  ("Amber Spence","semper@outlook.edu","Jan 1, 2024",41,"#21b0d1","$98.40");
+INSERT INTO `vendas` (`nome`,`email`,`numberrange`,`idade`,`cores`,`venda`)
+VALUES
+  ("Helen Chambers","pretium@icloud.com","May 23, 2023",32,"#dde585","$2.07"),
+  ("Carla Willis","hendrerit.donec@icloud.ca","Jun 28, 2025",42,"#f28452","$88.64"),
+  ("Aquila Dominguez","eget@hotmail.ca","Jan 10, 2025",62,"#76fc67","$28.66"),
+  ("Jin Ashley","at.iaculis@hotmail.ca","Feb 20, 2024",60,"#837ff9","$65.62"),
+  ("Judah Chapman","varius.ultrices@google.couk","Feb 2, 2024",83,"#8e0d07","$71.43"),
+  ("Stacy Cooley","aliquam@icloud.net","Aug 1, 2023",62,"#04c945","$21.71"),
+  ("Emery Hooper","aliquam@hotmail.net","Aug 23, 2024",87,"#4e3496","$42.14"),
+  ("Nevada Dunn","lacus@hotmail.org","Oct 3, 2024",48,"#4de2c9","$58.88"),
+  ("Alexa Mcbride","vitae@icloud.couk","Sep 6, 2023",61,"#029335","$92.39"),
+  ("Kamal Avery","nulla.ante@protonmail.ca","Apr 10, 2024",74,"#562ce0","$26.65");
+INSERT INTO `vendas` (`nome`,`email`,`numberrange`,`idade`,`cores`,`venda`)
+VALUES
+  ("Beau Prince","a@yahoo.couk","Mar 16, 2024",34,"#cc4300","$60.41"),
+  ("Jonah Osborn","phasellus.fermentum@outlook.ca","Nov 4, 2024",23,"#d3c0f7","$28.89"),
+  ("Amos Pate","donec@outlook.net","Jul 6, 2024",74,"#612af9","$4.51"),
+  ("Suki Hyde","curabitur@hotmail.edu","May 4, 2024",83,"#a77ce2","$41.23"),
+  ("Yoko Hatfield","mi.ac@yahoo.edu","Jul 30, 2024",79,"#2fed32","$72.48"),
+  ("Ruth Russell","nibh.aliquam@protonmail.couk","Jun 15, 2024",28,"#d1f9a9","$22.53"),
+  ("Charity Foreman","at.auctor@hotmail.ca","Aug 30, 2025",61,"#1f9e09","$98.89"),
+  ("Merritt Riddle","egestas.fusce@yahoo.net","Dec 28, 2024",21,"#fce9ba","$80.00"),
+  ("Amela Robinson","nulla@icloud.com","Jun 22, 2024",84,"#8ac7d8","$79.97"),
+  ("Orson Vaughn","cras.sed.leo@google.net","Jul 21, 2025",85,"#32379e","$87.48");
+
+select * from vendas;
+insert into vendas select * from bck_vendas;
+/*Recuperação de dados via backup "bck_vendas" */
+select * from vendas where idade between 60 and 90 order by nome asc;
+use umc1;
+create table bck_vendas select * from vendas;
+/*backup de tabelas */
+select *from bck_vendas;
+delete from vendas;
+
+select * from vendas where nome like "R%" and idade between 18 and 20 and venda-5.00;
+desc vendas;
