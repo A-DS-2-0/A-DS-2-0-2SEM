@@ -54,3 +54,47 @@ FROM
 WHERE
     c.cod_prod = p.cod_produto
         AND c.cod_marca = m.cod_marca; 
+        
+        
+show tables;
+select * from vendas;
+create table email_vendas(
+id int primary key ,
+email varchar(40)
+);
+use umc;
+show tables;
+insert into email_vendas select id,email from bck_vendas; #inserindo valor de uma tabela em outra
+
+select * from email_vendas; 
+alter table vendas drop email ; #comando para apagar campos
+select * from vendas; #backup da tabela 
+
+alter table vendas add email varchar(100) not null;
+insert into vendas select email_vendas.email from email_vendas where vendas.id = email_vendas.id;
+insert into vendas select e.email from email_vendas e, vendas v where v.id = e.id;
+
+drop table vendas;
+describe vendas;
+create table vendas select * from bck_vendas;
+alter table vendas modify column id int not null primary key auto_increment;
+alter table vendas modify column clientes varchar(30) not null;
+alter table vendas modify column email varchar(30) not null;
+alter table vendas modify column date date  not null;
+alter table vendas modify column idade int not null;
+alter table vendas modify column cartao char(12) not null;
+alter table vendas modify column  vendas varchar(30) not null;
+#a6
+
+select * from produtos;
+select * from marcas;
+#1
+select p.nome_produto, p.valor_produto, m.nome_marca from produtos p, marcas m where p.cod_marca = m.cod_marca;
+#2
+create table resultados select p.nome_produto, p.valor_produto, m.nome_marca from produtos p, marcas m where p.cod_marca = m.cod_marca;
+#3
+select nome_produto, concat("R$" , valor_produto) as valor_produto, nome_marca from resultados ;
+#4
+alter table resultados modify column valor_produto float(6,2);
+#5
+create table bck_produtos select * from produtos;
