@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+    <h1> Formulario </h1>
+    <hr>
+    <form action="mensagem.html" method="post">
+        <label form="name">Nome:</label>
+        <input type="text" id="nome" name="nome" required> <br><br>
+
+        <label form="email">Email:</label>
+        <input type="text" id="email" name="email" required> <br><br>
+
+        <label for="assunto">Assunto:</label>
+        <select id="assunto" name="assunto">
+            <option value="duvida">Duvida</option>
+            <option value="sugestao">Sugestao</option>
+            <option value="reclamacao">Reclamacao</option>
+        </select>
+        <br><br>
+        <label for="mensagem">Mensagm</label>
+        <textarea type="submit" name="mensagem" rows="4" required></textarea>
+        <br>
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>
