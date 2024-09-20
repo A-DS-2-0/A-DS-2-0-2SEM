@@ -1,0 +1,149 @@
+Nome: Thais Pereira de Oliveira
+RGM: 11241103553
+
+create database atividade_1;
+use atividade_1;
+
+create table clientes(
+id_cliente int primary key auto_increment,
+nome varchar (100),
+email varchar(100),
+cidade varchar(100),
+idade int);
+
+create table compras(
+id_compra int primary key auto_increment,
+id_cliente int,
+data_compra date,
+valor DECIMAL(10,2),
+produto VARCHAR (100),
+foreign key (id_cliente) references clientes(id_cliente)
+);
+
+insert into clientes(nome, email, cidade, idade)
+values('ana silva','ana@gmail','são paulo',24),
+('bruno souza','brunO@gmail.com','rio de janeiro',32),
+('carla pereira','carla@gmail.com','belo horizonte',28),
+('diego lima', 'diego@gmail.com','salvador',45),
+('Thais pereira', 'thais@gmail.com','Pernambuco',19),
+('Erick Fernando', 'erick@gmail.com','Minas Gerais',18),
+('Eduardo Vincente', 'edu@gmail.com','São Paulo',18),
+('Rafael da Silva', 'rafa@gmail.com','São Paulo',18),
+('Gabriel', 'gabriel@gmail.com','Acre',18),
+('Liandra Lourenço', 'liandra@gmail.com','Fortaleza',25);
+
+insert into compras (id_cliente,data_compra,valor,produto)
+values(1,'2023-05-10', 150.00,'Televisão'),
+(1,'2023-06-12', 250.00,'Celular'),
+(2,'2023-04-18', 400.00,'Laptop'),
+(3,'2023-07-27', 90.00,'Fone de Ouvido'), 
+(2,'2023-06-27', 900.00,'Processador'), 
+(1,'2023-05-27', 3000.00,'Geladeira'), 
+(2,'2023-04-27', 500.00,'Monitor'), 
+(3,'2023-02-27', 100.00,'Teclado'), 
+(2,'2023-02-11', 800.00,'Mesa'), 
+(1,'2023-06-30', 770.00,'Cadeira gamer');
+
+
+#-------ATIVIDADES-------
+
+#1
+select * from clientes;
+
+#2
+select nome, email from clientes;
+
+#3
+select * from clientes where cidade= 'salvador';
+
+#4
+select * from clientes where cidade='rio de janeiro' and idade>=30;
+
+#5
+select * from clientes where cidade='sao paulo' or  cidade='salvador';
+
+#6
+select * from clientes where cidade in ('sao paulo','salvador','belo horizonte');
+
+#7
+select * from clientes where cidade like "c%";
+
+#8
+select * from compras where data_compra between '2023-04-01' and '2023-06-30';
+
+#9
+select max(valor) from compras;
+
+#10
+select min(valor) from compras;
+
+#11
+select count(nome)from clientes;
+
+#12
+select avg(valor) from compras;
+
+#13
+select sum(valor) from compras;
+
+#14
+select sum(valor) from compras group by id_cliente;
+
+#15
+select * from clientes order by nome;
+
+#16
+select * from clientes order by nome desc;
+
+#17 
+
+select * from clientes limit 5;
+
+#18
+
+alter table clientes add telefone integer;
+
+#19
+
+alter table clientes modify column telefone varchar(20);
+
+#20
+
+alter table clientes change telefone contato_telefone varchar (20);
+
+#21
+
+alter table clientes drop contato_telefone;
+
+#22
+
+delete from compras where valor <100;
+
+#23
+
+delete from compras;
+
+#24
+
+update clientes set idade = 26 where nome = 'ana silva';
+
+#25
+
+create table bck_compras select * from compras;
+
+#26
+drop table compras;
+
+#27
+
+desc bck_compras;
+alter table bck_compras modify column id_compra int primary key auto_increment; 
+alter table bck_compras add foreign key (id_cliente ) references clientes(id_cliente); 
+
+#28 
+
+select comp.* from bck_compras comp, clientes cl where cl.nome = 'ana silva';
+
+#29 
+
+update clientes set email = 'bruno@umc.com' where nome = 'bruno souza';
