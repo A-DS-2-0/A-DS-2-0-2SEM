@@ -1,0 +1,17 @@
+body{
+    font-size: 15px;
+}
+footer{
+    background-color: red;
+    color: white;
+}
+/* .imagem-conteudo{
+    border-radius: 40px;
+} */
+@media(min-width:320px) and (max-width:450px)  {
+    .imagem-conteudo{
+        border-radius: 20px;
+        width: 80%;
+    }
+    
+}

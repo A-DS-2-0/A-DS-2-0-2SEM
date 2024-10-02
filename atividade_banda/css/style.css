@@ -1,0 +1,11 @@
+body {
+    background-color: black;
+    color:white;
+    align-items: center;
+    
+}
+img{
+    justify-content: center;
+    width:80%;
+    height: 5% ;
+}
