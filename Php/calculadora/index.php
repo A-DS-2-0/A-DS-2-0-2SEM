@@ -23,26 +23,31 @@
     </select>
     <button name="enviar" type="submit" >Calcular</button>
     <?php 
-    if ( $_POST['v1'] && $_POST['v2']){
-        $v1 = $_POST['v1'];
+    if ($_POST['v1'] && $_POST['v2']){
+        $v1 = $_POST['v1']; #variavel global
         $v2 =$_POST['v2'];
         $resultado = 0;
         $operacao = $_POST['operacao'];
-        if ($operacao=='soma'){
-            $resultado=$v1+$v2;
-        }else if($operacao=='subtracao'){
-            $resultado=$v1-$v2;
-        }else if($operacao=='multiplicacao'){
-            $resultado=$v1*$v2;
-        }else if($operacao=='divisao'){
-            try{
-                $resultado=$v1/$v2;
-            }catch (DivisionByZeroError){
-                echo "impossivel dividir por 0";            
+        function soma($n1, $n2, $operacao){
+            if ($operacao=='soma'){
+                $resultado=$n1+$n2;
+            }else if($operacao=='subtracao'){
+                $resultado=$n1-$n2;
+            }else if($operacao=='multiplicacao'){
+                $resultado=$n1*$n2;
+            }else if($operacao=='divisao'){
+                try{
+                    $resultado=$n1/$n2;
+                }catch (DivisionByZeroError){
+                    $resultado = "impossivel dividir por 0";            
+                }
             }
+             return $resultado;
         }
-       echo "<h3> Resultado = " , $resultado , "</h3>";
+        echo "<h3> Resultado = ", soma($v1,$v2,$operacao), "</h3>";
+
     }
+      
         ?>
  
 </form>
