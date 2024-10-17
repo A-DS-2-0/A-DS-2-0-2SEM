@@ -1,0 +1,75 @@
+Erick Fernando 1241504537
+Thais Pereira 11241103553
+
+create database atividadee4;
+use atividade4;
+
+CREATE TABLE Alunos (
+    id_aluno INT PRIMARY KEY,
+    nome VARCHAR(100),
+    data_nascimento DATE
+);
+ 
+CREATE TABLE Disciplinas (
+    id_disciplina INT PRIMARY KEY,
+    nome_disciplina VARCHAR(100)
+);
+ 
+CREATE TABLE Notas (
+    id_nota INT PRIMARY KEY,
+    id_aluno INT,
+    id_disciplina INT,
+    nota DECIMAL(5, 2),
+    FOREIGN KEY (id_aluno) REFERENCES Alunos(id_aluno),
+    FOREIGN KEY (id_disciplina) REFERENCES Disciplinas(id_disciplina)
+);
+ 
+ 
+INSERT INTO Alunos (id_aluno, nome, data_nascimento) 
+VALUES (1, 'João', '2005-02-15'), (2, 'Maria', '2004-09-22'), (3, 'Ana', '2005-07-11');
+ 
+INSERT INTO Disciplinas (id_disciplina, nome_disciplina) 
+VALUES (1, 'Matemática'), (2, 'Português'), (3, 'História');
+ 
+INSERT INTO Notas (id_nota, id_aluno, id_disciplina, nota) 
+VALUES (1, 1, 1, 8.5), (2, 1, 2, 7.0), (3, 2, 1, 6.0), (4, 3, 2, 9.0), (5, 3, 3, 7.5);
+ 
+ 
+#1- Listar todos os alunos e suas respectivas notas em todas as disciplinas:
+#Utilizando JOIN para exibir as notas com o nome do aluno e o nome da disciplina.
+select a.id_aluno, n.nota, d.nome_disciplina, a.nome from notas n inner join disciplinas d on n.id_disciplina = d.id_disciplina inner join alunos a on a.id_aluno = n.id_aluno;
+
+#2- Exibir as médias de cada aluno em todas as disciplinas:
+#Agrupar as notas por aluno e calcular a média.
+select a.nome, d.nome_disciplina, avg((select n.nota from notas where id_aluno = a.id_aluno group by a.id_aluno)) as media from notas n inner join disciplinas d on n.id_disciplina = d.id_disciplina inner join alunos a on a.id_aluno = n.id_aluno group by a.id_aluno;
+ 
+#3 - Exibir os alunos que possuem uma média superior a 7:
+#Selecionar alunos cuja média de notas seja maior que 7. 
+ SELECT 
+    a.nome,avg((nota)) as media
+FROM alunos a 
+        INNER JOIN
+    notas n ON a.id_aluno = n.id_aluno and n.nota>7
+    group by a.id_aluno;
+
+#4- Encontrar a maior nota em cada disciplina:
+#Exibir a maior nota para cada disciplina.
+select max(n.nota) as 'maior nota', d.nome_disciplina from notas n inner join disciplinas d on n.id_disciplina = d.id_disciplina group by d.nome_disciplina;
+
+#5- Contar quantos alunos tiraram nota acima de 8 em cada disciplina:
+#Mostrar o número de alunos com nota maior que 8 por disciplina.
+select  count(n.nota) as 'alunos com nota maior que 8' from notas n inner join disciplinas d on n.id_disciplina = d.id_disciplina inner join alunos a on a.id_aluno = n.id_aluno where n.nota > 8;
+ 
+ 
+#6- Exibir os alunos que têm nota abaixo de 5 em qualquer disciplina:
+#Mostrar o nome dos alunos que têm alguma nota menor que 5.
+select n.nota, a.nome from notas n inner join disciplinas d on n.id_disciplina = d.id_disciplina inner join alunos a on a.id_aluno = n.id_aluno where n.nota <5;
+
+#7- Remover todas as notas de um aluno específico:
+#Suponha que você precise remover as notas do aluno com id_aluno = 2.
+delete from notas where id_aluno =2;
+ 
+#8- Atualizar a nota de um aluno em uma disciplina:
+#Atualizar a nota do aluno id_aluno = 1 para id_disciplina = 1 com o valor 9.0.
+update notas set nota= 9.0 where id_aluno = 1 and id_disciplina=1
+
