@@ -1,0 +1,115 @@
+Nome: Erick Fernando RGM: 11241504537
+Nome: Thais Oliveira RGM: 11241103553
+
+
+create database atividade_assimilacao_2;
+use atividade_assimilacao_2;
+
+CREATE TABLE clientes (
+    cliente_id INT PRIMARY KEY,
+    nome_cliente VARCHAR(100),
+    estado_cliente VARCHAR(50),
+    credito_disponivel DECIMAL(10, 2)
+);
+ 
+-- Inserindo registros na tabela de clientes
+INSERT INTO clientes (cliente_id, nome_cliente, estado_cliente, credito_disponivel) VALUES
+(1, 'Maria Silva', 'SP', 1500.00),
+(2, 'João Santos', 'RJ', 1200.00),
+(3, 'Ana Oliveira', 'MG', 2000.00),
+(4, 'Carlos Souza', 'SP', 500.00),
+(5, 'Fernanda Costa', 'PR', 750.00),
+(6, 'Lucas Pereira', 'RJ', 1000.00);
+ 
+-- Tabela de Pedidos
+CREATE TABLE pedidos (
+    pedido_id INT PRIMARY KEY,
+    cliente_id INT,
+    produto_id INT,
+    valor_pedido DECIMAL(10, 2),
+    data_pedido DATE,
+    FOREIGN KEY (cliente_id) REFERENCES clientes(cliente_id)
+);
+ 
+-- Inserindo registros na tabela de pedidos
+INSERT INTO pedidos (pedido_id, cliente_id, produto_id, valor_pedido, data_pedido) VALUES
+(1, 1, 1, 500.00, '2024-10-01'),
+(2, 2, 2, 300.00, '2024-10-02'),
+(3, 3, 3, 150.00, '2024-10-03'),
+(4, 4, 1, 200.00, '2024-10-04'),
+(5, 5, 2, 450.00, '2024-10-05'),
+(6, 6, 3, 600.00, '2024-10-06');
+ 
+-- Tabela de Produtos
+CREATE TABLE produtos (
+    produto_id INT PRIMARY KEY,
+    nome_produto VARCHAR(100),
+    preco DECIMAL(10, 2),
+    quantidade_estoque INT
+);
+ 
+-- Inserindo registros na tabela de produtos
+INSERT INTO produtos (produto_id, nome_produto, preco, quantidade_estoque) VALUES
+(1, 'Produto A', 100.00, 50),
+(2, 'Produto B', 150.00, 30),
+(3, 'Produto C', 200.00, 20);
+
+#1. SELECT com IN
+#Descrição: Selecionar os pedidos feitos por clientes dos estados "SP" ou "RJ".
+select c.nome_cliente, c.estado_cliente, p.pedido_id from clientes c inner join pedidos p on c.cliente_id = p.cliente_id where c.estado_cliente in ("SP","RJ");
+
+#2. COUNT (Contagem de registros)
+#Descrição: Contar o número de pedidos feitos por cada cliente.
+select c.nome_cliente, count(p.pedido_id) as quantidade_pedidos from pedidos p inner join clientes c on p.cliente_id = c.cliente_id group by c.cliente_id;
+#3. SUM (Soma dos valores de uma coluna)
+#Descrição: Somar o valor total dos pedidos feitos por cada cliente.
+select c.cliente_id, c.nome_cliente, sum(p.valor_pedido) as valor_total from pedidos p inner join clientes c on p.cliente_id = c.cliente_id group by c.cliente_id;
+#4. MAX (Valor máximo de uma coluna)
+#Descrição: Encontrar o maior valor de pedido realizado.
+select max(valor_pedido) as maior_pedido from pedidos;
+#5. MIN (Valor mínimo de uma coluna)
+#Descrição: Encontrar o menor valor de pedido realizado.
+select min(valor_pedido) as menor_pedido from pedidos;
+#6. INNER JOIN
+#Descrição: Realizar um  INNER JOIN entre a tabela de pedidos e a tabela de clientes para buscar detalhes dos pedidos e clientes.
+select c.*, p.* from clientes c inner join pedidos p on c.cliente_id = p.cliente_id;
+
+#7. LEFT JOIN
+#Descrição: Realizar um LEFT JOIN entre pedidos e produtos, incluindo todos os pedidos, mesmo aqueles sem produto relacionado.
+select p.pedido_id, pr.produto_id, pr.nome_produto from pedidos p left join produtos pr on p.produto_id = pr.produto_id;
+
+#8. RIGHT JOIN
+#Descrição: Realizar um RIGHT JOIN entre a tabela de produtos e pedidos, mostrando todos os produtos, incluindo os que não foram pedidos.
+select p.pedido_id, pr.produto_id, pr.nome_produto from pedidos p right join produtos pr on p.produto_id = pr.produto_id;
+
+#9. UPDATE
+#Descrição: Atualizar o valor do pedido de ID 1 para um novo valor.
+update pedidos set valor_pedido = 100 where pedido_id=1;
+
+
+#10. ALTER TABLE para adicionar uma nova coluna
+#Descrição: Alterar a tabela de pedidos para adicionar uma coluna status.
+alter table pedidos add column status varchar(20);
+
+#11. Criar PROCEDURE
+#Descrição: Criar uma stored procedure para calcular o total de vendas por cliente.
+CREATE DEFINER=`root`@`localhost` PROCEDURE `total_vendas`()
+BEGIN
+select c.nome_cliente, count(p.pedido_id) as total_vendas from clientes c inner join pedidos p on p.cliente_id = c.cliente_id group by c.cliente_id;
+END;
+#12. Chamar a PROCEDURE
+#Descrição: Chamar a procedure total de vendas por cliente para mostrar os resultados.
+call atividade_assimilacao_2.total_vendas();
+#13. Criar TRIGGER antes de inserir um pedido
+#Descrição: Criar um trigger para verificar se o cliente tem crédito suficiente antes de realizar um pedido.
+
+CREATE DEFINER=`root`@`localhost` TRIGGER `atividade_assimilacao_2`.`pedidos_BEFORE_INSERT` BEFORE INSERT ON `pedidos` FOR EACH ROW
+BEGIN
+if new.valor_pedido > (select credito_disponivel from clientes where cliente_id = new.cliente_id) then
+delete from pedidos where cliente_id = new.cliente_id;
+end if;
+END;
+
+#14. SELECT com LIKE
+#Descrição: Buscar todos os clientes cujos nomes começam com "Maria".
+select * from clientes where nome_cliente like 'Maria%';
