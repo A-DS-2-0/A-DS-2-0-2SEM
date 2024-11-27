@@ -1,7 +1,7 @@
 <?php
 
 $url = "localhost";
-$database = "escola";
+$database = "hamburgueria";
 $username = "root";
 $password = "";
 

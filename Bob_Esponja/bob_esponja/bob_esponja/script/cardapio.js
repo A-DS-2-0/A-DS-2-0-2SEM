@@ -40,7 +40,7 @@ function Calcular() {
         document.getElementById('total').innerHTML = `<h3>Selecione algum produto</h3>`;
         document.getElementById('confirmar_pedido').style.visibility="hidden"; 
         document.getElementById('fechar_modal').innerText = "Ok" 
-
+        
     }
 }
 
