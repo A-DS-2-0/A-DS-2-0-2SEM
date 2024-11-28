@@ -1,3 +1,6 @@
+*{
+    font-family: Arial, Helvetica, sans-serif !important;
+}
 body{
     background-color: white;
     color: black;
@@ -7,10 +10,19 @@ h1 {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: black; 
 }
+.card-text {
+    text-align: left; /* Alinha o texto à esquerda */
+    margin-left: 0; /* Garante que o texto fique encostado na borda, se necessário */
+}
+
 
 .container {
-    margin-top: 50px;
+    margin-top: 0px;
 }
+.container2 {
+    margin-top: 0px;
+}
+
 
 h3 {
     margin-bottom: 10px;
@@ -111,7 +123,8 @@ button:hover {
 #nav_bar{
      background: linear-gradient(to right, #0764A6,  #9ec9e7);
     width: 100%;
-    
+    height: 100px;
+
 }
 #nav_bar a {
     color: #ffffff; 

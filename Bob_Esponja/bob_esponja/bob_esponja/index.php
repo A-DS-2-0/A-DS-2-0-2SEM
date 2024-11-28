@@ -17,9 +17,8 @@
               <a class="navbar-brand" href="#">
                 <img id="logo" src="img/logo1.png" alt="logo" width="40" height="40">
               </a>
-              <a href="#historia">HISTORIA</a>
-              <a href="#cardapio">CARDAPIO</a>
-              <a  id="cardapio" href="login.php" class="login-button">LOGIN</a>
+              <a href="cardapio.php">CARDAPIO</a>
+              <a href="login.php" class="login-button">LOGIN</a>
             </div>
           </nav>
     <nav>
@@ -78,7 +77,7 @@ A lenda do Hambúrguer de Siri se espalhou por todos os oceanos, tornando-o um �
     <div class="container">
         <a href="#lanches" id="LANCHES"></a>
          <br>
-         <div id="lanches" class="row mb-4">
+        <div id="lanches" class="row mb-4">
             <div class="col-md-4 mb-3">
                 <div class="card">
                     <img src="img/x- Plankton.png" class="card-img-top" alt="Hambuguer X-Plankton">
@@ -103,6 +102,9 @@ A lenda do Hambúrguer de Siri se espalhou por todos os oceanos, tornando-o um �
                     </div>
                 </div>
             </div>
+        </div>
+</div>
+</section>
 <br>
 <h2>
     Para ter acesso completo ao nosso cardápio e se deliciar com nossos hambúrgueres, faça o seu login.
